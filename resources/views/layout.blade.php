@@ -12,7 +12,7 @@
     <!-- Custom styles for this template -->
     <link href="css/album.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="test">
 	@include('layouts.nav')
 	@yield('content')
 	@include('layouts.footer')
