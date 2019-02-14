@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/hosts', 'HostsController@index');
 Route::get('/hosts/{host}', 'HostsController@show');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
