@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Support\Str;
 
-class Category extends Model
+class Template extends Model
 {
 	// Mass Assigned
-    protected $fillable = ['name', 'url', 'count', 'view'];
+    protected $fillable = ['name', 'url', 'img_local', 'view'];
 
     // Mutators
     public function setUrlAttribute($value) {

@@ -48,8 +48,8 @@ class Statistic
                         'GEOIP_LATITUDE' => $info['GEOIP_LATITUDE'],
                         'GEOIP_LONGITUDE' => $info['GEOIP_LONGITUDE'],
                         'GEOIP_POSTAL_CODE' => $info['GEOIP_POSTAL_CODE'],
-                        'created_at' => date('Y-m-d h:i:s', time()),
-                        'updated_at' => date('Y-m-d h:i:s', time())
+                        'created_at' => date('Y-m-d H:i:s', time()),
+                        'updated_at' => date('Y-m-d H:i:s', time())
                     ]);
 
             $info['GEOIP_ID'] = $id;
@@ -57,7 +57,7 @@ class Statistic
             $request->session()->put('user_info', $info);
         } elseif($request->session()->has('user_info')) {
             $info = $request->session()->get('user_info');
-            DB::table('hosts')->where('id', $info['GEOIP_ID'])->update(['updated_at' => date('Y-m-d h:i:s', time())]);
+            DB::table('hosts')->where('id', $info['GEOIP_ID'])->update(['updated_at' => date('Y-m-d H:i:s', time())]);
         }
         return $next($request);
     }

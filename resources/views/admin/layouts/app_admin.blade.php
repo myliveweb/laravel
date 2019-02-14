@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>С днём святого Валентина</title>
+</head>
+<body>
+
+</body>
+</html>
+<!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
@@ -45,7 +55,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Шаблоны</a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{route('admin.category.index')}}">Категории</a></li>
-                                <li><a href="/hosts?order=asc">HTML Шаблоны</a></li>
+                                <li><a href="{{route('admin.template.index')}}">HTML Шаблоны</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
