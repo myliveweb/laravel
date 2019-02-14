@@ -10,7 +10,12 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Bootstrap core CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+
     <!-- Styles -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -37,11 +42,14 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
-                            <a href="/hosts" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hosts</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Шаблоны</a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="/hosts?order=desc">Сначала новые</a></li>
-                                <li><a href="/hosts?order=asc">По возрастанию</a></li>
+                                <li><a href="{{route('admin.category.index')}}">Категории</a></li>
+                                <li><a href="/hosts?order=asc">HTML Шаблоны</a></li>
                             </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/hosts" class="dropdown-toggle" role="button" aria-expanded="false">Host</a>
                         </li>
                     </ul>
 
